@@ -1,26 +1,16 @@
 <div class="container">
-    <div class="row decoration shadow-lg p-3 mb-5 bg-white rounded">
+    <div class="row">
         <div class="col-sm">
-            <h2>Select a business Account</h2>
-            <mat-tab-group>
+            <h3>{{selectAccountHeader}}</h3>
+            <mat-tab-group (selectedTabChange)="setSelectAccountHeader($event)">
                 <mat-tab label="Business">
-                    <form class="example-form">
-                        <mat-form-field class="example-full-width" appearance="fill">
-                          <mat-label>Search</mat-label>
-                          <input type="search" matInput placeholder="Ex. my local business" value="">
-                        </mat-form-field>
-                    </form>
+                    <app-search-bar [tabIndex]="tabIndex"></app-search-bar>
                     <div class="business-list">
                         <app-business-list></app-business-list>
                     </div>
                 </mat-tab>
                 <mat-tab label="Individual">
-                    <form class="example-form">
-                        <mat-form-field class="example-full-width" appearance="fill">
-                          <mat-label>Search</mat-label>
-                          <input type="search" matInput placeholder="Ex. my local business" value="">
-                        </mat-form-field>
-                    </form>
+                    <app-search-bar></app-search-bar>
                     <div class="business-list">
                         <app-business-list></app-business-list>
                     </div>
@@ -28,8 +18,8 @@
               </mat-tab-group>              
         </div>
         <div class="col-sm">
-            <h2>Create a new business Account</h2>
-            <mat-tab-group>
+            <h3>{{createAccountHeader}}</h3>
+            <mat-tab-group (selectedTabChange)="setCreateAccountHeader($event)">
                 <mat-tab label="Business">
                     <app-new-business></app-new-business>
                 </mat-tab>

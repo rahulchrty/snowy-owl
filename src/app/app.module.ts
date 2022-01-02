@@ -16,14 +16,28 @@ import {MatInputModule} from '@angular/material/input';
 import {MatCardModule} from '@angular/material/card';
 import {MatButtonModule} from '@angular/material/button';
 import {MatDatepickerModule} from '@angular/material/datepicker';
-import {MatTabsModule} from '@angular/material/tabs'; 
+import {MatTabsModule} from '@angular/material/tabs';
+import { NavbarComponent } from './navbar/navbar.component';
+import {MatSidenavModule} from '@angular/material/sidenav';
+import {MatIconModule} from '@angular/material/icon';
+import {MatToolbarModule} from '@angular/material/toolbar';
+import { SearchBarComponent } from './search-bar/search-bar.component';
+import { DrawerMenuComponent } from './drawer-menu/drawer-menu.component';
+import { DrawerBrandingComponent } from './drawer-branding/drawer-branding.component';
+import {MatMenuModule} from '@angular/material/menu';
+import { UserComponent } from './user/user.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     GetStartedComponent,
     NewBusinessComponent,
-    BusinessListComponent
+    BusinessListComponent,
+    NavbarComponent,
+    SearchBarComponent,
+    DrawerMenuComponent,
+    DrawerBrandingComponent,
+    UserComponent
   ],
   imports: [
     BrowserModule,
@@ -38,7 +52,11 @@ import {MatTabsModule} from '@angular/material/tabs';
     MatCardModule,
     MatButtonModule,
     MatDatepickerModule,
-    MatTabsModule
+    MatTabsModule,
+    MatSidenavModule,
+    MatIconModule,
+    MatToolbarModule,
+    MatMenuModule
   ],
   providers: [],
   bootstrap: [AppComponent]

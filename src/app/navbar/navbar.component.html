@@ -1,0 +1,20 @@
+<mat-drawer-container class="example-container" autosize>
+    <mat-drawer #drawer class="example-sidenav" mode="side">
+      <app-drawer-branding></app-drawer-branding>
+      <mat-selection-list #menuItem [multiple]="false">
+        <mat-list-option *ngFor="let eachItem of menuItems" [value]="eachItem">
+          {{eachItem}}
+          <mat-divider></mat-divider>
+        </mat-list-option>
+      </mat-selection-list>
+    </mat-drawer>
+   <mat-toolbar color="primary">
+    <button mat-icon-button class="example-icon" (click)="drawer.toggle()">
+      <mat-icon>menu</mat-icon>
+    </button>
+    <span>Snowy Owl</span>
+    <span class="example-spacer"></span>
+    <app-user></app-user>
+  </mat-toolbar>
+  <app-get-started></app-get-started>
+</mat-drawer-container>
