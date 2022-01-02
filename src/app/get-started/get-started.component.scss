@@ -1,7 +1,15 @@
 .decoration {
     margin: 2em;
-    min-height: fit-content;
+    overflow: hidden;
+    max-height: 800px;
 }
+
 h2 {
     padding: 1em;
+    padding-left: 0.7em;
+}
+
+.business-list{
+    max-height: 500px;
+    overflow-y: auto;
 }
