@@ -6,7 +6,7 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./navbar.component.scss']
 })
 export class NavbarComponent implements OnInit {
-
+  menuItems: string[] = ['Get Started', 'Settings'];
   constructor() { }
 
   ngOnInit(): void {

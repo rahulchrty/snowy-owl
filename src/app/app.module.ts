@@ -22,6 +22,10 @@ import {MatSidenavModule} from '@angular/material/sidenav';
 import {MatIconModule} from '@angular/material/icon';
 import {MatToolbarModule} from '@angular/material/toolbar';
 import { SearchBarComponent } from './search-bar/search-bar.component';
+import { DrawerMenuComponent } from './drawer-menu/drawer-menu.component';
+import { DrawerBrandingComponent } from './drawer-branding/drawer-branding.component';
+import {MatMenuModule} from '@angular/material/menu';
+import { UserComponent } from './user/user.component';
 
 @NgModule({
   declarations: [
@@ -30,7 +34,10 @@ import { SearchBarComponent } from './search-bar/search-bar.component';
     NewBusinessComponent,
     BusinessListComponent,
     NavbarComponent,
-    SearchBarComponent
+    SearchBarComponent,
+    DrawerMenuComponent,
+    DrawerBrandingComponent,
+    UserComponent
   ],
   imports: [
     BrowserModule,
@@ -48,7 +55,8 @@ import { SearchBarComponent } from './search-bar/search-bar.component';
     MatTabsModule,
     MatSidenavModule,
     MatIconModule,
-    MatToolbarModule
+    MatToolbarModule,
+    MatMenuModule
   ],
   providers: [],
   bootstrap: [AppComponent]

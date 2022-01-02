@@ -3,18 +3,27 @@
     height: 100vh;
   }
   
-  .example-sidenav-content {
+.example-sidenav-content {
     display: flex;
     height: 100%;
     align-items: center;
     justify-content: center;
   }
   
-  .example-sidenav {
+.example-sidenav {
     padding: 20px;
+    min-width: 15em;
   }
   
-  .mat-toolbar.mat-primary {
-    background: #0568da;
+.mat-toolbar.mat-primary {
+    background: #3f51b5;
     color: #fff;
+}
+
+.example-sidenav {
+  padding: 0px;
+}
+
+.example-spacer {
+  flex: 1 1 auto;
 }

@@ -1,29 +1,20 @@
 <mat-drawer-container class="example-container" autosize>
     <mat-drawer #drawer class="example-sidenav" mode="side">
-      <mat-list>
-        <mat-list-item>
-          <nav>
-            <a mat-button routerLink="dashboard" routerLinkActive="active">Dashboard</a>
-          </nav>
-        </mat-list-item>
-        <mat-divider></mat-divider>
-        <mat-list-item>
-          <a mat-button target="_blank">Add New Item</a>
-        </mat-list-item>
-        <mat-divider></mat-divider>
-        <mat-list-item>
-          <a mat-button target="_blank">Remove An Item</a>
-        </mat-list-item>
-        <mat-divider></mat-divider>
-        <mat-list-item>
-          <a mat-button target="_blank">Edit An Item</a>
-        </mat-list-item>
-      </mat-list>
+      <app-drawer-branding></app-drawer-branding>
+      <mat-selection-list #menuItem [multiple]="false">
+        <mat-list-option *ngFor="let eachItem of menuItems" [value]="eachItem">
+          {{eachItem}}
+          <mat-divider></mat-divider>
+        </mat-list-option>
+      </mat-selection-list>
     </mat-drawer>
    <mat-toolbar color="primary">
     <button mat-icon-button class="example-icon" (click)="drawer.toggle()">
       <mat-icon>menu</mat-icon>
     </button>
+    <span>Snowy Owl</span>
+    <span class="example-spacer"></span>
+    <app-user></app-user>
   </mat-toolbar>
   <app-get-started></app-get-started>
-  </mat-drawer-container>
+</mat-drawer-container>
