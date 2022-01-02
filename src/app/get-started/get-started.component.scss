@@ -1,7 +1,7 @@
 .decoration {
     margin: 2em;
     overflow: hidden;
-    max-height: 800px;
+    max-height: 700px;
 }
 
 h2 {
@@ -10,6 +10,15 @@ h2 {
 }
 
 .business-list{
-    max-height: 500px;
+    max-height: 369px;
     overflow-y: auto;
 }
+
+.example-form {
+    min-width: 150px;
+    width: 100%;
+  }
+  
+  .example-full-width {
+    width: 100%;
+  }
