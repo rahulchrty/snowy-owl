@@ -25,6 +25,7 @@ export class GetStartedComponent implements OnInit {
     else {
       this.selectAccountHeader = "Select an individual's account";
       this.tabIndex = 1;
+      console.log(this.tabIndex);
     }
   }
 
