@@ -1,6 +1,6 @@
-<mat-selection-list #shoes [multiple]="false">
-  <mat-list-option *ngFor="let shoe of typesOfShoes" [value]="shoe">
-    {{shoe}}
+<mat-selection-list [multiple]="false">
+  <mat-list-option *ngFor="let eachAccount of accountListToDisplay" [value]="eachAccount">
+    {{eachAccount}}
     <mat-divider></mat-divider>
   </mat-list-option>
 </mat-selection-list>

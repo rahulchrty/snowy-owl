@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Input } from '@angular/core';
 
 @Component({
   selector: 'app-business-list',
@@ -6,10 +6,28 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./business-list.component.scss']
 })
 export class BusinessListComponent implements OnInit {
-  typesOfShoes: string[] = ['Shop Business', 'Institute Business', 'Institute Business', 'Institute Business', 'Institute Business', 'Other Business', 'Other Business', 'Other Business', 'Other Business', 'Other Business', 'Other Business', 'Other Business', 'Other Business', 'Other Business'];
+  
+  @Input() searchText : string = "";
+  private accountList: string[] = [];
+  public accountListToDisplay : string [] = [];
   constructor() { }
 
-  ngOnInit(): void {
+  ngOnChanges() : void {
+    this.filterAccountListBySearchText(this.searchText);
   }
 
+  ngOnInit(): void {
+    this.getAccountList();
+  }
+
+  private filterAccountListBySearchText(searchText:string):void {
+    if (searchText !== "") {
+      this.accountListToDisplay = this.accountList.filter(x => x.toLowerCase().startsWith(searchText.toLowerCase()));
+    }
+  }
+
+  private getAccountList() : void {
+      this.accountList = ['Shop Business', 'Institute Business', 'Institute Business', 'Institute Business', 'Institute Business', 'Other Business', 'Other Business', 'Other Business', 'Other Business', 'Other Business', 'Other Business', 'Other Business', 'Other Business', 'Other Business'];
+      this.accountListToDisplay = this.accountList;
+  }
 }

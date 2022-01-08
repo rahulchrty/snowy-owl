@@ -6,13 +6,13 @@
                 <mat-tab label="Business">
                     <app-search-bar [tabIndex]="tabIndex"></app-search-bar>
                     <div class="business-list">
-                        <app-business-list></app-business-list>
+                        <app-business-list [searchText]="searchedAccount"></app-business-list>
                     </div>
                 </mat-tab>
                 <mat-tab label="Individual">
                     <app-search-bar [tabIndex]="tabIndex"></app-search-bar>
                     <div class="business-list">
-                        <app-business-list></app-business-list>
+                        <app-business-list [searchText]="searchedAccount"></app-business-list>
                     </div>
                 </mat-tab>
               </mat-tab-group>              

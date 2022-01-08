@@ -11,6 +11,7 @@ export class GetStartedComponent implements OnInit {
   public selectAccountHeader: string = "Select a business account";
   public createAccountHeader: string = "Create a new business account";
   public tabIndex : number = 0;
+  public searchedAccount : string = "sh";
   
   constructor() { }
 
